@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<form action="/delete" method="POST">
+			<div class="form-check">
+			{% for i in range(result[0])%}
+			   <input class="form-check-input"
+					type="checkbox"
+					id="flexCheckDefault" name="msg" value={{result[i+1]}}>
+			   <label for={{i}}>{{result[i+1]}}</label><br>
+			{% endfor %}
+			
+  <label class="form-check-label" for="flexCheckDefault">
+  </label>
+</div>	
+			<input type="submit" value="Delete Message">
+		</form>
+		
+	
+	</body>
+</html>
